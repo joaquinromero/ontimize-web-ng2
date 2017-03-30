@@ -12,8 +12,7 @@
   "main": "ontimize.ts",
   "typings": "ontimize.d.ts",
   "scripts": {
-    "test": "npm install",
-    "postinstall": "typings install"
+    "test": "npm install"
   },
   "peerDependencies": {
     "@angular/common": "2.4.2",
