@@ -1,3 +1,4 @@
+import * as $ from 'jquery';
 import {
   Component, Inject, Injector, forwardRef, ElementRef, ViewChild, OnInit,
   Optional,
@@ -36,8 +37,8 @@ export const DEFAULT_OUTPUTS_O_DATE_INPUT = [
 
 @Component({
   selector: 'o-date-input',
-  templateUrl: '/input/date-input/o-date-input.component.html',
-  styleUrls: ['/input/date-input/o-date-input.component.css'],
+  templateUrl: 'o-date-input.component.html',
+  styleUrls: ['o-date-input.component.scss'],
   inputs: [
     ...DEFAULT_INPUTS_O_DATE_INPUT
   ],
@@ -99,7 +100,7 @@ export class ODateInputComponent extends OTextInputComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    this.inputHtmlEl = ($(this.elRef.nativeElement) as any).find('input.o-date-input');
+    this.inputHtmlEl = (this.elRef.nativeElement as any).find('input.o-date-input');
   }
 
   resolveValidators(): ValidatorFn[] {

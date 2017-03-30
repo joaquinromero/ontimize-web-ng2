@@ -1,16 +1,21 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs",
     "moduleResolution": "node",
-    "declaration": true,
-    "noImplicitAny": false,
+    "declaration": false,
     "removeComments": true,
-    "noLib": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    "listFiles": true
+    "listFiles": true,
+    "types": ["node"],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2016",
+      "dom"
+    ]
   },
   "files": [
     "ontimize.ts",

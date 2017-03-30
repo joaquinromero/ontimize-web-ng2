@@ -38,8 +38,8 @@ export const DEFAULT_OUTPUTS_O_INTEGER_INPUT = [
 
 @Component({
   selector: 'o-integer-input',
-  templateUrl: '/input/integer-input/o-integer-input.component.html',
-  styleUrls: ['/input/integer-input/o-integer-input.component.css'],
+  templateUrl: 'o-integer-input.component.html',
+  styleUrls: ['o-integer-input.component.scss'],
   inputs: [
     ...DEFAULT_INPUTS_O_INTEGER_INPUT
   ],
@@ -175,7 +175,7 @@ export class OIntegerInputComponent extends OTextInputComponent implements OnIni
     }
     if (typeof inputElement !== 'undefined') {
       if (this.focused) {
-        ($ as any)(inputElement).width(($ as any)(inputElement).outerWidth(true));
+        (inputElement as any).width((inputElement as any).outerWidth(true));
       }
       inputElement.type = this.focused ? 'number' : 'text';
       inputElement.value = val;

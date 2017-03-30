@@ -1,2 +1,2 @@
-require('jquery');
-require('jquery-ui');
+//require('jquery');
+//require('jquery-ui');

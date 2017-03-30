@@ -98,8 +98,8 @@ export const DEFAULT_OUTPUTS_O_FORM = [
   providers: [
     { provide: OntimizeService, useFactory: dataServiceFactory, deps: [Injector] }
   ],
-  templateUrl: '/form/o-form.component.html',
-  styleUrls: ['/form/o-form.component.css'],
+  templateUrl: 'o-form.component.html',
+  styleUrls: ['o-form.component.scss'],
   inputs: [
     ...DEFAULT_INPUTS_O_FORM
   ],
@@ -956,7 +956,7 @@ export class OFormComponent implements OnInit, OnDestroy {
           loader.unsubscribe();
           if (resp.code === 0) {
             observer.next(resp.data);
-            observer.complete(resp.data);
+            observer.complete();
           } else {
             observer.error(resp.message);
           }
@@ -1044,7 +1044,7 @@ export class OFormComponent implements OnInit, OnDestroy {
           if (resp.code === 0) {
             self.postCorrectDelete(resp);
             observer.next(resp.data);
-            observer.complete(resp.data);
+            observer.complete();
           } else {
             self.postIncorrectDelete(resp);
             observer.error(resp.message);

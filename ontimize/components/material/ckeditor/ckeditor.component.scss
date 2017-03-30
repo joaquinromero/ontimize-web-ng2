@@ -1,13 +1,13 @@
-@import 'ontimize/components/material/style/default-theme.scss';
-@import 'ontimize/components/material/style/mixins.scss';
-@import 'ontimize/components/material/style/variables.scss';
+@import '../ng2-material/core/style/default-theme.scss';
+@import '../ng2-material/core/style/mixins.scss';
+@import '../ng2-material/core/style/variables.scss';
 
 $md-ckeditor-floating-placeholder-scale-factor: 0.75 !default;
 
 // Gradient for showing the dashed line when the input is disabled.
 $md-ckeditor-underline-disabled-background-image: linear-gradient(to right,
         rgba(0, 0, 0, 0.26) 0%, rgba(0, 0, 0, 0.26) 33%, transparent 0%);
-
+$md-font-family: verdana;
 /**
  * Undo the red box-shadow glow added by Firefox on invalid inputs.
  * See https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-ui-invalid

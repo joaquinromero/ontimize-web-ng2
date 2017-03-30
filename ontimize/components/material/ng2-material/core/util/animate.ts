@@ -3,6 +3,26 @@
  */
 export class Animate {
 
+  /* From Modernizr */
+  static whichTransitionEvent(): string {
+    if (typeof document === 'undefined') {
+      return 'transitionend';
+    }
+    var t: string;
+    var el: any = document.createElement('fakeelement');
+    var transitions: {[prefix: string]: string} = {
+      'transition': 'transitionend',
+      'OTransition': 'oTransitionEnd',
+      'MozTransition': 'transitionend',
+      'WebkitTransition': 'webkitTransitionEnd'
+    };
+
+    for (t in transitions) {
+      if (el.style[t] !== undefined) {
+        return transitions[t];
+      }
+    }
+  }
   /**
    * Look up the transition event name for the browser type and cache it.
    */
@@ -109,27 +129,6 @@ export class Animate {
 
   static setTransitionDuration(element: HTMLElement, delayMs: number) {
     element.style['transition-duration'] = `${delayMs}ms`;
-  }
-
-  /* From Modernizr */
-  static whichTransitionEvent(): string {
-    if (typeof document === 'undefined') {
-      return 'transitionend';
-    }
-    var t: string;
-    var el: any = document.createElement('fakeelement');
-    var transitions: {[prefix: string]: string} = {
-      'transition': 'transitionend',
-      'OTransition': 'oTransitionEnd',
-      'MozTransition': 'transitionend',
-      'WebkitTransition': 'webkitTransitionEnd'
-    };
-
-    for (t in transitions) {
-      if (el.style[t] !== undefined) {
-        return transitions[t];
-      }
-    }
   }
 
   /**

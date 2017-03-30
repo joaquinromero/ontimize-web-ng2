@@ -1,4 +1,5 @@
 import * as moment from 'moment';
+declare function require(name:string);
 
 const MOM_LOCALES = {
   'es': require('moment/locale/es'),

@@ -1,3 +1,4 @@
+import * as $ from 'jquery';
 import {
   Component, OnInit, OnDestroy, OnChanges, SimpleChange,
   Inject, Injector, ElementRef,
@@ -131,9 +132,9 @@ export const DEFAULT_OUTPUTS_O_TABLE = [
 
 @Component({
   selector: 'o-table',
-  templateUrl: './table/o-table.component.html',
+  templateUrl: 'o-table.component.html',
   styleUrls: [
-    './table/o-table.component.css'
+    'o-table.component.scss'
   ],
   providers: [
     { provide: OntimizeService, useFactory: dataServiceFactory, deps: [Injector] }
@@ -1960,114 +1961,6 @@ export class OTableComponent extends OServiceComponent implements OnInit, OnDest
     });
   }
 
-  protected getTableOptions() {
-    let options = [];
-    var self = this;
-    var columnsSelector = ':visible:not(.o-table-select-checkbox):not(.o-table-column-action)';
-    // export actions
-    if (this.exportButton) {
-      options.push({
-        extend: 'copyHtml5',
-        name: 'copyHtml5',
-        text: this.translateService.get('TABLE.BUTTONS.COPY_TO_CLIPBOARD'),
-        className: 'export-action',
-        exportOptions: {
-          columns: columnsSelector
-        }
-      });
-      options.push({
-        extend: 'print',
-        name: 'print',
-        text: this.translateService.get('TABLE.BUTTONS.PRINT'),
-        className: 'export-action',
-        exportOptions: {
-          columns: columnsSelector
-        }
-      });
-      options.push({
-        extend: 'excelHtml5',
-        text: 'Excel',
-        name: 'excel',
-        className: 'export-action',
-        filename: this.title ? this.title : '*',
-        exportOptions: {
-          columns: columnsSelector
-        }
-      });
-      options.push({
-        extend: 'csvHtml5',
-        text: 'CSV',
-        name: 'csv',
-        className: 'export-action',
-        filename: this.title ? this.title : '*',
-        fieldSeparator: ',',
-        extension: '.csv',
-        exportOptions: {
-          columns: columnsSelector
-        }
-      });
-      options.push({
-        extend: 'pdfHtml5',
-        text: 'PDF',
-        name: 'pdf',
-        className: 'export-action',
-        filename: this.title ? this.title : '*',
-        title: this.title ? this.title : '*',
-        orientation: 'portrait',
-        pageSize: 'A4',
-        exportOptions: {
-          columns: columnsSelector,
-          orthogonal: 'export'
-        }
-      });
-      options.push({
-        text: this.translateService.get('TABLE.BUTTONS.EXPORT'),
-        className: 'generic-action generic-action-export',
-        action: () => {
-          self.exportButtonAction();
-        }
-      });
-    }
-
-    // group rows
-    if (this.columnsGroupButton) {
-      options.push({
-        text: this.translateService.get('TABLE.BUTTONS.GROUP_ROWS'),
-        className: 'generic-action generic-action-group',
-        action: () => {
-          self.columnsGroupButtonAction();
-        }
-      });
-    }
-
-    // resize columns
-    if (this.columnsResizeButton) {
-      options.push({
-        text: this.translateService.get('TABLE.BUTTONS.RESIZE_COLUMNS'),
-        className: 'generic-action generic-action-resize',
-        action: () => {
-          self.columnsResizeButtonAction();
-        }
-      });
-    }
-
-    // columns visibility option
-    if (this.columnsVisibilityButton) {
-      let colVisOptions = {
-        extend: 'colvis',
-        text: this.translateService.get('TABLE.BUTTONS.COLVIS'),
-        className: 'generic-action generic-action-view-column',
-        collectionLayout: 'fixed',
-        columns: []
-      };
-      for (var i = 0; i < this.visibleColumnsArray.length; i++) {
-        colVisOptions.columns.push(this.visibleColumnsArray[i] + ':name');
-      }
-      options.push(colVisOptions);
-    }
-    return options;
-  }
-
   protected exportButtonAction() {
     this.showExportOptions = !this.showExportOptions;
   }
@@ -2194,7 +2087,7 @@ export class OTableComponent extends OServiceComponent implements OnInit, OnDest
     return labels;
   }
 
-  public isColumnEditable(column: string) {
+  public isColumnEditable(column: string):boolean {
     return (this.editableColumnsArray.indexOf(column) !== -1);
   }
 
@@ -2314,6 +2207,116 @@ export class OTableComponent extends OServiceComponent implements OnInit, OnDest
       }
     }
     return av;
+  }
+	
+	
+
+  protected getTableOptions() {
+    let options = [];
+    var self = this;
+    var columnsSelector = ':visible:not(.o-table-select-checkbox):not(.o-table-column-action)';
+    // export actions
+    if (this.exportButton) {
+      options.push({
+        extend: 'copyHtml5',
+        name: 'copyHtml5',
+        text: this.translateService.get('TABLE.BUTTONS.COPY_TO_CLIPBOARD'),
+        className: 'export-action',
+        exportOptions: {
+          columns: columnsSelector
+        }
+      });
+      options.push({
+        extend: 'print',
+        name: 'print',
+        text: this.translateService.get('TABLE.BUTTONS.PRINT'),
+        className: 'export-action',
+        exportOptions: {
+          columns: columnsSelector
+        }
+      });
+//      options.push({
+//        extend: 'excelHtml5',
+//        text: 'Excel',
+//        name: 'excel',
+//        className: 'export-action',
+//        filename: this.title ? this.title : '*',
+//        exportOptions: {
+//          columns: columnsSelector
+//        }
+//      });
+//      options.push({
+//        extend: 'csvHtml5',
+//        text: 'CSV',
+//        name: 'csv',
+//        className: 'export-action',
+//        filename: this.title ? this.title : '*',
+//        fieldSeparator: ',',
+//        extension: '.csv',
+//        exportOptions: {
+//          columns: columnsSelector
+//        }
+//      });
+      options.push({
+        extend: 'pdfHtml5',
+        text: 'PDF',
+        name: 'pdf',
+        className: 'export-action',
+        filename: this.title ? this.title : '*',
+        title: this.title ? this.title : '*',
+        orientation: 'portrait',
+        pageSize: 'A4',
+        exportOptions: {
+          columns: columnsSelector,
+          orthogonal: 'export'
+        }
+      });
+      options.push({
+        text: this.translateService.get('TABLE.BUTTONS.EXPORT'),
+        className: 'generic-action generic-action-export',
+        action: () => {
+          self.exportButtonAction();
+        }
+      });
+    }
+
+    // group rows
+    if (this.columnsGroupButton) {
+      options.push({
+        text: this.translateService.get('TABLE.BUTTONS.GROUP_ROWS'),
+        className: 'generic-action generic-action-group',
+        action: () => {
+          self.columnsGroupButtonAction();
+        }
+      });
+    }
+
+    // resize columns
+    if (this.columnsResizeButton) {
+      options.push({
+        text: this.translateService.get('TABLE.BUTTONS.RESIZE_COLUMNS'),
+        className: 'generic-action generic-action-resize',
+        action: () => {
+          self.columnsResizeButtonAction();
+        }
+      });
+    }
+
+    // columns visibility option
+    if (this.columnsVisibilityButton) {
+      let colVisOptions = {
+        extend: 'colvis',
+        text: this.translateService.get('TABLE.BUTTONS.COLVIS'),
+        className: 'generic-action generic-action-view-column',
+        collectionLayout: 'fixed',
+        columns: []
+      };
+      for (var i = 0; i < this.visibleColumnsArray.length; i++) {
+        colVisOptions.columns.push(this.visibleColumnsArray[i] + ':name');
+      }
+      options.push(colVisOptions);
+    }
+    return options;
   }
 
 }
