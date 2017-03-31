@@ -20,6 +20,6 @@ export function loadLocale(locale: string) {
     keys.map(item => {
       config[item.substring(1)] = loc_mom[item];
     });
-    moment.locale(locale, config);
+    moment.updateLocale(locale, config);
   }
 }

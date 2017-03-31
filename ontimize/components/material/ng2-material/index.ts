@@ -13,7 +13,7 @@ import {ViewportHelper, BrowserViewportHelper, NodeViewportHelper} from './core/
 import {OverlayContainer} from '@angular/material';
 
 /** Token used to inject the DOM element that serves as the overlay container. */
-export declare const OVERLAY_CONTAINER_TOKEN: OpaqueToken;
+//export declare const OVERLAY_CONTAINER_TOKEN: OpaqueToken;
 
 export * from './components/content/content';
 export * from './components/form/validators';
@@ -48,9 +48,9 @@ let _overlayContainer: OverlayContainer = new OverlayContainer();
  */
 export const MATERIAL_BROWSER_PROVIDERS: any[] = [
   ...MATERIAL_NODE_PROVIDERS,
-  {provide:ViewportHelper, useClass: BrowserViewportHelper},
+  {provide:ViewportHelper, useClass: BrowserViewportHelper}//,
   // TODO(jd): should this be here? Or in the example app bootstrap?
-  {provide:OVERLAY_CONTAINER_TOKEN, useValue: _overlayContainer.getContainerElement()},
+//  {provide:OVERLAY_CONTAINER_TOKEN, useValue: _overlayContainer.getContainerElement()},
 ];
 
 

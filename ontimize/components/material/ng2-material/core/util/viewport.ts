@@ -61,7 +61,7 @@ export class NodeViewportHelper extends ViewportHelper {
     return {};
   }
   requestFrame(fn: (elapsed?: number)=>any) {
-    return process.nextTick(fn);
+    return null;//process.nextTick(fn);
   }
 
   matchMedia(query: string): ViewportMediaMatch {

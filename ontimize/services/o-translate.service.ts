@@ -1,6 +1,6 @@
 import { Injector, Injectable } from '@angular/core';
 import { EventEmitter } from '@angular/core';
-import { TranslateService } from 'ng2-translate';
+import { TranslateService } from '@ngx-translate/core';
 import { MomentService } from '../services';
 
 import * as CORE_TRANSLATIONS from '../i18n/i18n';

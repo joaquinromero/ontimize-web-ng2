@@ -1,4 +1,3 @@
-import * as $ from 'jquery';
 import {
   Component, Inject, Injector, forwardRef, ElementRef, ViewChild, OnInit,
   Optional,
@@ -100,7 +99,7 @@ export class ODateInputComponent extends OTextInputComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    this.inputHtmlEl = (this.elRef.nativeElement as any).find('input.o-date-input');
+    this.inputHtmlEl = ($(this.elRef.nativeElement) as any).find('input.o-date-input');
   }
 
   resolveValidators(): ValidatorFn[] {

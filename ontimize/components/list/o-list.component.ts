@@ -1,4 +1,3 @@
-import * as $ from 'jquery';
 import {
   Component, OnInit, Inject, Injector,
   AfterContentInit, ContentChildren,

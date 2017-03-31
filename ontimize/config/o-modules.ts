@@ -1,14 +1,10 @@
-import { Http } from '@angular/http';
+import { Http, HttpModule } from '@angular/http';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 
-import {
-  TranslateModule,
-  TranslateLoader,
-  TranslateStaticLoader
-} from 'ng2-translate';
+import { TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { MaterialModule } from '@angular/material';
 
@@ -60,6 +56,10 @@ import {
   OSharedModule
 } from '../shared.module';
 
+export function HttpLoaderFactory(http: Http) {
+    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+
 export const ONTIMIZE_MODULES: any = [
   // Standard modules
   BrowserModule,
@@ -69,9 +69,11 @@ export const ONTIMIZE_MODULES: any = [
 
   // Ng2-translate
   TranslateModule.forRoot({
-    provide: TranslateLoader,
-    useFactory: (http: Http) => new TranslateStaticLoader(http, './assets/i18n', '.json'),
-    deps: [Http]
+	  loader: {
+    	 provide: TranslateLoader,
+    	 useFactory: HttpLoaderFactory,
+    	 deps: [Http]
+	  }
   }),
 
   // Material modules

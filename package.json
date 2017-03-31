@@ -1,60 +1,98 @@
 {
-  "name": "ontimize-web-ng2",
-  "homepage": "https://github.com/OntimizeWeb/ontimize-web-ng2#readme",
-  "description": "Ontimize Web framework with Angular 2",
-  "bugs": "https://github.com/OntimizeWeb/ontimize-web-ng2/issues",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/OntimizeWeb/ontimize-web-ng2.git"
+  "_args": [
+    [
+      {
+        "raw": "ontimize-web-ng2@git+https://github.com/joaquinromero/ontimize-web-ng2.git",
+        "scope": null,
+        "escapedName": "ontimize-web-ng2",
+        "name": "ontimize-web-ng2",
+        "rawSpec": "git+https://github.com/joaquinromero/ontimize-web-ng2.git",
+        "spec": "git+https://github.com/joaquinromero/ontimize-web-ng2.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:joaquinromero/ontimize-web-ng2.git",
+          "sshUrl": "git+ssh://git@github.com/joaquinromero/ontimize-web-ng2.git",
+          "httpsUrl": "git+https://github.com/joaquinromero/ontimize-web-ng2.git",
+          "gitUrl": "git://github.com/joaquinromero/ontimize-web-ng2.git",
+          "shortcut": "github:joaquinromero/ontimize-web-ng2",
+          "directUrl": "https://raw.githubusercontent.com/joaquinromero/ontimize-web-ng2/master/package.json"
+        }
+      },
+      "C:\\PROJECTS\\WORKSPACE_VARIOS\\danone-visits-web"
+    ]
+  ],
+  "_from": "git+https://github.com/joaquinromero/ontimize-web-ng2.git",
+  "_id": "ontimize-web-ng2@1.2.1",
+  "_inCache": true,
+  "_location": "/ontimize-web-ng2",
+  "_phantomChildren": {
+    "symbol-observable": "1.0.4"
   },
-  "scripts": {
-    "test": "npm install"
+  "_requested": {
+    "raw": "ontimize-web-ng2@git+https://github.com/joaquinromero/ontimize-web-ng2.git",
+    "scope": null,
+    "escapedName": "ontimize-web-ng2",
+    "name": "ontimize-web-ng2",
+    "rawSpec": "git+https://github.com/joaquinromero/ontimize-web-ng2.git",
+    "spec": "git+https://github.com/joaquinromero/ontimize-web-ng2.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:joaquinromero/ontimize-web-ng2.git",
+      "sshUrl": "git+ssh://git@github.com/joaquinromero/ontimize-web-ng2.git",
+      "httpsUrl": "git+https://github.com/joaquinromero/ontimize-web-ng2.git",
+      "gitUrl": "git://github.com/joaquinromero/ontimize-web-ng2.git",
+      "shortcut": "github:joaquinromero/ontimize-web-ng2",
+      "directUrl": "https://raw.githubusercontent.com/joaquinromero/ontimize-web-ng2/master/package.json"
+    }
   },
-  "version": "1.2.1",
-  "license": "Apache-2.0",
-  "engines": {
-    "node": ">= 5.4.1"
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/joaquinromero/ontimize-web-ng2.git#2a74a96a2846735c5a20a7392a567c611deab2c7",
+  "_shasum": "10d11febfc29afa9e396a8039ddecce50f4bd6d2",
+  "_shrinkwrap": null,
+  "_spec": "ontimize-web-ng2@git+https://github.com/joaquinromero/ontimize-web-ng2.git",
+  "_where": "C:\\PROJECTS\\WORKSPACE_VARIOS\\danone-visits-web",
+  "author": {
+    "name": "Imatia S.L."
+  },
+  "bugs": {
+    "url": "https://github.com/OntimizeWeb/ontimize-web-ng2/issues"
   },
   "dependencies": {
-    "@angular/common": "2.4.2",
-    "@angular/compiler": "2.4.2",
-    "@angular/core": "2.4.2",
-    "@angular/forms": "2.4.2",
-    "@angular/http": "2.4.2",
-    "@angular/platform-browser": "2.4.2",
-    "@angular/platform-browser-dynamic": "2.4.2",
-    "@angular/router": "3.4.2",
-    "@angular/upgrade": "2.4.2",
+    "@angular/common": "^4.0.0",
+    "@angular/compiler": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "@angular/forms": "^4.0.0",
+    "@angular/http": "^4.0.0",
     "@angular/material": "2.0.0-beta.1",
+    "@angular/platform-browser": "^4.0.0",
+    "@angular/platform-browser-dynamic": "^4.0.0",
+    "@angular/router": "^4.0.0",
+    "@angular/upgrade": "^4.0.0",
+    "@types/jasmine": "2.5.38",
+    "@types/node": "~6.0.60",
+    "colresizable": "1.6.0",
     "core-js": "^2.4.1",
-    "reflect-metadata": "^0.1.3",
-    "rxjs": "5.0.1",
-    "systemjs": "0.19.38",
-    "zone.js": "0.7.4",
-    "moment": "2.17.1",
-    "ng2-translate": "5.0.0",
-    "jquery": "^3.0.0",
-    "jquery-ui": "^1.12.0",
     "datatables.net": "^1.10.12",
     "datatables.net-buttons": "^1.2.1",
     "datatables.net-colreorder": "^1.3.2",
     "datatables.net-select": "^1.2.0",
-    "colresizable": "1.6.0",
-    "@types/jasmine": "2.5.38",
-    "@types/node": "~6.0.60",
-    "pdfmake": "^0.1.18"
-  },   
+    "jquery": "^3.0.0",
+    "jquery-ui": "^1.12.0",
+    "moment": "2.17.1",
+    "pdfmake": "^0.1.18",
+    "@ngx-translate/core": "^6.0.1",
+    "@ngx-translate/http-loader": "0.0.3",
+    "reflect-metadata": "^0.1.3",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  },
+  "description": "Ontimize Web framework with Angular 2",
   "devDependencies": {
-    "@angular/common": "2.4.2",
-    "@angular/compiler": "2.4.2",
-    "@angular/core": "2.4.2",
-    "@angular/forms": "2.4.2",
-    "@angular/http": "2.4.2",
-    "@angular/material": "2.0.0-beta.1",
-    "@angular/platform-browser": "2.4.2",
-    "@angular/platform-browser-dynamic": "2.4.2",
-    "@angular/router": "3.4.2",
-    "@angular/upgrade": "2.4.2",
+    "@angular/compiler": "^4.0.0",
     "@types/jasmine": "2.5.38",
     "@types/node": "~6.0.60",
     "async": "^2.0.0-rc.5",
@@ -107,7 +145,6 @@
     "karma-spec-reporter": "0.0.26",
     "merge-stream": "^1.0.0",
     "moment": "2.17.1",
-    "ng2-translate": "5.0.0",
     "open": "0.0.5",
     "pdfmake": "^0.1.18",
     "phantomjs-prebuilt": "^2.1.7",
@@ -133,38 +170,22 @@
     "yargs": "^4.7.1",
     "zone.js": "0.7.4"
   },
-  "_from": "git+https://github.com/joaquinromero/ontimize-web-ng2.git",
-  "_id": "ontimize-web-ng2@1.2.1",
-  "_inCache": true,
-  "_location": "/ontimize-web-ng2",
-  "_phantomChildren": {},
-  "_requested": {
-    "raw": "https://github.com/joaquinromero/ontimize-web-ng2.git",
-    "scope": null,
-    "escapedName": null,
-    "name": null,
-    "rawSpec": "https://github.com/joaquinromero/ontimize-web-ng2.git",
-    "spec": "git+https://github.com/joaquinromero/ontimize-web-ng2.git",
-    "type": "hosted",
-    "hosted": {
-      "type": "github",
-      "ssh": "git@github.com:joaquinromero/ontimize-web-ng2.git",
-      "sshUrl": "git+ssh://git@github.com/joaquinromero/ontimize-web-ng2.git",
-      "httpsUrl": "git+https://github.com/joaquinromero/ontimize-web-ng2.git",
-      "gitUrl": "git://github.com/joaquinromero/ontimize-web-ng2.git",
-      "shortcut": "github:joaquinromero/ontimize-web-ng2",
-      "directUrl": "https://raw.githubusercontent.com/joaquinromero/ontimize-web-ng2/master/package.json"
-    }
+  "engines": {
+    "node": ">= 5.4.1"
   },
-  "_resolved": "git+https://github.com/joaquinromero/ontimize-web-ng2.git#a5f151975bdd0802a4be2b600c16368f8a6ba41b",
-  "_shasum": "a37be3dcdd10cc0dc39a0b6a576841ebd87ca0d2",
-  "_shrinkwrap": null,
-  "_spec": "https://github.com/joaquinromero/ontimize-web-ng2.git",
-  "_where": "C:\\PROJECTS\\WORKSPACE_VARIOS\\danone-visits-web",
-  "author": {
-    "name": "Imatia S.L."
-  }, 
-  "gitHead": "a5f151975bdd0802a4be2b600c16368f8a6ba41b",    
+  "gitHead": "a5f151975bdd0802a4be2b600c16368f8a6ba41b",
+  "homepage": "https://github.com/OntimizeWeb/ontimize-web-ng2#readme",
+  "license": "Apache-2.0",
+  "name": "ontimize-web-ng2",
+  "optionalDependencies": {},
   "readme": "# Ontimize Web\r\n\r\nOntimize Web is web application framework that provides to you an environment for solving the problematic situation of building aplications that require a browser-based user interface. Ontimize Web allows developing data management applications quickly and agile.\r\n\r\nOntimize Web is based on the new [2.x version of Angular](https://angular.io/), and comes with many significant performance, usability, and feature improvements.\r\n\r\n\r\n### Try Ontimize Web\r\n\r\nTo try Ontimize Web today, visit the [Ontimize Web Docs](https://ontimizeweb.github.io/docs/). We would love any feedback you have or to know when you encounter issues, by filing an issue report on this repo.\r\n\r\n\r\n### Ontimize Web Examples\r\n\r\nThere is a practical [Quick Start App](https://github.com/OntimizeWeb/ontimize-web-ng2-quickstart), a perfect starting point for building your own Ontimize Web app.\r\n",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/OntimizeWeb/ontimize-web-ng2.git"
+  },
+  "scripts": {
+    "test": "npm install"
+  },
+  "version": "1.2.1"
 }

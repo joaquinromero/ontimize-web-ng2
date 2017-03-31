@@ -1,4 +1,3 @@
-import * as $ from 'jquery';
 import { Component, OnInit, Inject, Injector, forwardRef, EventEmitter } from '@angular/core';
 import { ObservableWrapper } from '../../../util/async';
 
@@ -304,4 +303,3 @@ export class OTableCellEditorDateComponent implements OnInit, ITableCellEditor {
   }
 
 }
-
