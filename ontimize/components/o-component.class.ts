@@ -37,56 +37,56 @@ export class OComponent implements IComponent {
     this._placeholder = this.olabel ? this.olabel : this.oattr;
   }
 
-  getAttribute(): string {
+  public getAttribute(): string {
     if (this.oattr) {
       return this.oattr;
     }
     return undefined;
   }
 
-  get placeHolder(): string {
+  public get placeHolder(): string {
     if (this.translateService) {
       return this.translateService.get(this._placeholder);
     }
     return this._placeholder;
   }
 
-  set placeHolder(value: string) {
+  public set placeHolder(value: string) {
     this._placeholder = value;
   }
 
-  get tooltip(): string {
+  public get tooltip(): string {
     if (this.translateService) {
       return this.translateService.get(this._tooltip);
     }
     return this._tooltip;
   }
 
-  set tooltip(value: string) {
+  public set tooltip(value: string) {
     this._tooltip = value;
   }
 
-  get tooltipPosition(): string {
+  public get tooltipPosition(): string {
     return this._tooltipPosition;
   }
 
-  set tooltipPosition(value: string) {
+  public set tooltipPosition(value: string) {
     this._tooltipPosition = value;
   }
 
-  get tooltipShowDelay(): number {
+  public get tooltipShowDelay(): number {
     return this._tooltipShowDelay;
   }
 
-  set tooltipShowDelay(value: number) {
+  public set tooltipShowDelay(value: number) {
     this._tooltipShowDelay = value;
   }
 
-  get isReadOnly(): boolean {
+  public get isReadOnly(): boolean {
     return this._isReadOnly;
   }
 
-  set isReadOnly(value: boolean) {
+  public set isReadOnly(value: boolean) {
     if (this._disabled) {
       this._isReadOnly = false;
       return;
@@ -94,19 +94,19 @@ export class OComponent implements IComponent {
     this._isReadOnly = value;
   }
 
-  get isDisabled(): boolean {
+  public get isDisabled(): boolean {
     return this._disabled;
   }
 
-  set disabled(value: boolean) {
+  public set disabled(value: boolean) {
     this._disabled = value;
   }
 
-  get isRequired(): boolean {
+  public get isRequired(): boolean {
     return this.orequired;
   }
 
-  set required(value: boolean) {
+  public set required(value: boolean) {
     var self = this;
     window.setTimeout(() => {
       self.orequired = value;

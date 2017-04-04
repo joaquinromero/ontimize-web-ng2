@@ -202,7 +202,7 @@ export class OTableComponent extends OServiceComponent implements OnInit, OnDest
   @InputConverter()
   paginationControls: boolean = true;
   /* End of Inputs */
-
+	
   /*parsed inputs variables */
   protected visibleColumnsArray: Array<string>;
   protected editableColumnsArray: Array<string>;
@@ -249,6 +249,7 @@ export class OTableComponent extends OServiceComponent implements OnInit, OnDest
   protected initialColumnsWidths: Array<any> = [];
 
   @ViewChild(MdMenuTrigger) menuTrigger: MdMenuTrigger;
+	
   private columnWidthHandlerInterval: any;
 
   private isProgrammaticChange: boolean = false;
@@ -1616,14 +1617,14 @@ export class OTableComponent extends OServiceComponent implements OnInit, OnDest
             let data = undefined;
             if (($ as any).isArray(res)) {
               data = res;
-            } else if ((res.code === 0) && ($ as any).isArray(res.data)) {
+            } else if (res.code === 0) {				 
               data = (res.data !== undefined) ? res.data : [];
               if (self.pageable) {
                 self.updatePaginationInfo(res);
               }
             }
             // set table data
-            if (($ as any).isArray(data)) {
+				if (res.code == 0) {
               self.dataTable.fnClearTable(false);
               if (self.pageable) {
                 self.setPaginatedTableData(data, ovrrArgs);

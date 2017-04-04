@@ -99,7 +99,7 @@ export class OTextInputComponent extends OFormDataComponent implements OnInit {
     return validators;
   }
 
-  innerOnChange(event: any) {
+  protected innerOnChange(event: any) {
     if (!this.value) {
       this.value = new OFormValue();
     }
@@ -107,13 +107,13 @@ export class OTextInputComponent extends OFormDataComponent implements OnInit {
     this.onChange.emit(event);
   }
 
-  innerOnFocus(event: any) {
+  protected innerOnFocus(event: any) {
     if (!this.isReadOnly && !this.isDisabled) {
       this.onFocus.emit(event);
     }
   }
 
-  innerOnBlur(event: any) {
+  protected innerOnBlur(event: any) {
     if (!this.isReadOnly && !this.isDisabled) {
       this.onBlur.emit(event);
     }
