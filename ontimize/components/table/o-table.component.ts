@@ -2005,6 +2005,7 @@ export class OTableComponent extends OServiceComponent implements OnInit, OnDest
   protected getTableButtons() {
     let buttons = [];
     let buttonTextClass = this.showTableButtonsText ? '' : ' hidden-action-text';
+//		 '<i class="material-icons left">add_circle</i>'
     // add
     if (this.insertButton) {
       buttons.push({

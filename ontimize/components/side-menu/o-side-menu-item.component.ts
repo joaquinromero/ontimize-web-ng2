@@ -8,7 +8,7 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {RouterModule} from '@angular/router';
+import {RouterModule, Router} from '@angular/router';
 import { MdIconModule } from '@angular/material';
 
 import { OSideMenuModule, OSideMenuComponent } from './o-side-menu.component';
@@ -52,7 +52,7 @@ export class OSideMenuItemComponent implements OnInit {
 
   protected restricted: boolean;
 
-  constructor(@Inject(forwardRef(() => OSideMenuComponent)) menu: OSideMenuComponent) {
+  constructor(@Inject(forwardRef(() => OSideMenuComponent)) menu: OSideMenuComponent, private router: Router) {
     this.menu = menu;
   }
 
@@ -65,6 +65,13 @@ export class OSideMenuItemComponent implements OnInit {
       this.restricted = false;
     }
   }
+	
+	protected onRoute():void {
+		const self = this;
+		this.router.navigate([this.route]).then( res => {
+			self.menu.hideSidenav();
+		});
+	}
 
 }
 

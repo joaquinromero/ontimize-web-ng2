@@ -45,6 +45,10 @@ export class OSideMenuComponent {
     this.opened = false;
     this.authGuardService = this.injector.get(AuthGuardService);
   }
+	
+	public hideSidenav() {
+		this.sidenav.close();
+	}
 
   public showSidenav() {
     this.opened = true;

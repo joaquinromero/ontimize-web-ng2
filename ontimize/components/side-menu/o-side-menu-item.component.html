@@ -1,4 +1,4 @@
-<a *ngIf="!restricted && !action && route" class="md-list-item" [routerLink]="[ route ]">
+<a *ngIf="!restricted && !action && route" class="md-list-item" (click)="onRoute()">
   <md-icon *ngIf="icon" class="o-side-menu-item-icon md-24">{{ icon }}</md-icon>
   <div class="o-side-menu-item-title">{{ title | oTranslate }}</div>
 </a>

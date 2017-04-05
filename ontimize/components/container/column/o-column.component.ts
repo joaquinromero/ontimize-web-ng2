@@ -141,11 +141,12 @@ export class OColumnComponent implements OnInit {
     let arr_ = this.elRef.nativeElement.classList;
     if (arr_ && arr_.length) {
       var self = this;
-      arr_.forEach((item, index) => {
-        if (item.startsWith('md-whiteframe')) {
+		for (let i = 0; i < arr_.length; i++) {
+			let item = arr_[i];
+    	  if (item.startsWith('md-whiteframe')) {
           self.elRef.nativeElement.classList.remove(item);
         }
-      });
+		}
     }
   }
 
