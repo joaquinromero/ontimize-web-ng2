@@ -33,6 +33,6 @@ class DataServiceFactory {
   }
 };
 
-export let dataServiceFactory = function (injector: Injector) {
+export function dataServiceFactory(injector: Injector) {
   return new DataServiceFactory(injector).factory();
 };
