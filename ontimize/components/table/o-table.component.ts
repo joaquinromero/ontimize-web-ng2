@@ -2249,32 +2249,32 @@ export class OTableComponent extends OServiceComponent implements OnInit, OnDest
 //          columns: columnsSelector
 //        }
 //      });
-//      options.push({
-//        extend: 'csvHtml5',
-//        text: 'CSV',
-//        name: 'csv',
-//        className: 'export-action',
-//        filename: this.title ? this.title : '*',
-//        fieldSeparator: ',',
-//        extension: '.csv',
-//        exportOptions: {
-//          columns: columnsSelector
-//        }
-//      });
       options.push({
-        extend: 'pdfHtml5',
-        text: 'PDF',
-        name: 'pdf',
+        extend: 'csvHtml5',
+        text: 'CSV',
+        name: 'csv',
         className: 'export-action',
         filename: this.title ? this.title : '*',
-        title: this.title ? this.title : '*',
-        orientation: 'portrait',
-        pageSize: 'A4',
+        fieldSeparator: ',',
+        extension: '.csv',
         exportOptions: {
-          columns: columnsSelector,
-          orthogonal: 'export'
+          columns: columnsSelector
         }
       });
+//      options.push({
+//        extend: 'pdfHtml5',
+//        text: 'PDF',
+//        name: 'pdf',
+//        className: 'export-action',
+//        filename: this.title ? this.title : '*',
+//        title: this.title ? this.title : '*',
+//        orientation: 'portrait',
+//        pageSize: 'A4',
+//        exportOptions: {
+//          columns: columnsSelector,
+//          orthogonal: 'export'
+//        }
+//      });
       options.push({
         text: this.translateService.get('TABLE.BUTTONS.EXPORT'),
         className: 'generic-action generic-action-export',
