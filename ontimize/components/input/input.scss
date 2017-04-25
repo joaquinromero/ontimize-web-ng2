@@ -14,3 +14,7 @@ span.icon-btn{
     cursor: default;
   }
 }
+
+.md-input-placeholder.md-float.md-focused, :not(.md-empty).md-input-placeholder.md-float {
+  width: 100% !important;
+}
