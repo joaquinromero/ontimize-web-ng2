@@ -5,7 +5,7 @@ require('jquery');
 // TODO: require pdfmake from node_modules if files are available at its build directory
 //(window as any).pdfMake = require('pdfmake/build/pdfmake.min.js');
 //require('pdfmake/build/vfs_fonts.js');
-(window as any).pdfMake = require('./vendor/pdfmake.min.js');
+//(window as any).pdfMake = require('./vendor/pdfmake.min.js');
 require('./vendor/vfs_fonts.js');
 require('datatables.net');
 require('datatables.net-buttons');
